@@ -7,13 +7,14 @@ body {
   padding: 0;
   background: #f8f9fa;
   color: #333;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
 }
-
 
 /* ==================================================== */
 /* ==== HERO (Encabezado estilo dividido) ==== */
@@ -26,19 +27,21 @@ a {
   color: white;
   padding: 20px 40px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .hero-texto {
-  max-width: 50%;
+  flex: 1 1 300px;
+  max-width: 600px;
 }
 
 .hero-texto h1 {
-  font-size: 2.3rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 10px;
 }
 
 .hero-texto p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   background: rgba(0, 0, 0, 0.4);
   display: inline-block;
   padding: 6px 12px;
@@ -46,8 +49,11 @@ a {
 }
 
 .hero-img {
-  max-width: 280px;
+  flex: 1 1 250px;
+  max-width: 300px;
   border-radius: 12px;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* ==== Versión móvil ==== */
@@ -55,15 +61,15 @@ a {
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 
   .hero-texto {
     max-width: 100%;
-    margin-bottom: 15px;
   }
 
   .hero-img {
-    max-width: 200px;
+    max-width: 220px;
   }
 }
 
@@ -71,13 +77,13 @@ a {
 /* ==== CATÁLOGO ==== */
 /* ==================================================== */
 .productos {
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .productos h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  margin-bottom: 25px;
   color: #e63946;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -85,9 +91,9 @@ a {
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 0 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 5px;
 }
 
 .card {
@@ -108,13 +114,14 @@ a {
 
 .card img {
   width: 100%;
-  height: 280px;
+  height: auto;
+  max-height: 280px;
   object-fit: cover;
 }
 
 .card h3 {
   margin: 15px 0 5px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333;
 }
 
@@ -122,20 +129,22 @@ a {
   margin-bottom: 10px;
   font-weight: bold;
   color: #e63946;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Botón WhatsApp */
 .btn-whatsapp {
-  display: inline-block;
   padding: 10px 16px;
   margin: 10px auto 15px;
   background: #25d366;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 0.95rem;
   transition: background 0.3s ease, transform 0.2s ease;
   text-align: center;
+  width: 80%;
+  max-width: 220px;
 }
 
 .btn-whatsapp:hover {
@@ -153,4 +162,31 @@ footer {
   padding: 15px;
   margin-top: 40px;
   font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+/* ==================================================== */
+/* ==== EXTRAS PARA PANTALLAS MUY PEQUEÑAS ==== */
+/* ==================================================== */
+@media (max-width: 480px) {
+  .hero-texto h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-texto p {
+    font-size: 0.95rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .btn-whatsapp {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 }
