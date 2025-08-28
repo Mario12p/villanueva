@@ -1,6 +1,4 @@
-/* ==================================================== */
-/* ==== ESTILOS GENERALES ==== */
-/* ==================================================== */
+
 body {
     font-family: "Poppins", Arial, sans-serif;
     margin: 0;
@@ -16,9 +14,6 @@ a {
     display: inline-block;
 }
 
-/* ==================================================== */
-/* ==== HERO (Encabezado estilo dividido) ==== */
-/* ==================================================== */
 .hero {
     display: flex;
     align-items: center;
@@ -56,7 +51,6 @@ a {
     width: 100%;
 }
 
-/* ==== Versión móvil ==== */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -73,9 +67,6 @@ a {
     }
 }
 
-/* ==================================================== */
-/* ==== CATÁLOGO ==== */
-/* ==================================================== */
 .productos {
     padding: 40px 20px;
     text-align: center;
@@ -152,9 +143,6 @@ a {
     transform: scale(1.05);
 }
 
-/* ==================================================== */
-/* ==== FOOTER ==== */
-/* ==================================================== */
 footer {
     background: #333;
     color: white;
@@ -165,9 +153,6 @@ footer {
     word-wrap: break-word;
 }
 
-/* ==================================================== */
-/* ==== EXTRAS PARA PANTALLAS MUY PEQUEÑAS ==== */
-/* ==================================================== */
 @media (max-width: 480px) {
     .hero-texto h1 {
         font-size: 1.5rem;
